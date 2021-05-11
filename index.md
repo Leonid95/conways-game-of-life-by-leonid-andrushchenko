@@ -6,6 +6,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <style>
+        .inner {
+            width: fit-content !important;
+            width: -moz-fit-content !important;
+        }
+
+        #main-content {
+            width: fit-content !important;
+            width: -moz-fit-content !important;
+        }
+
+        #main-content>p {
+            display: none;
+        }
+
+        #sidebar {
+            display: none;
+        }
+
         body {
             overflow: scroll;
             font-family: cursive;
@@ -159,10 +177,10 @@
                 });
 
                 $("#startTheGame").click(function () {
-                    if(is_game_running){
+                    if (is_game_running) {
                         return;
                     }
-                    
+
                     is_game_running = true;
                     $("#app-state").text("Game is running");
                     $("#app-state").removeClass("stopped-state");
@@ -178,7 +196,7 @@
                 });
 
                 $(document).on("click", ".cell", function () {
-                    if(is_game_running){
+                    if (is_game_running) {
                         return;
                     }
 
